@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Amazon Clone</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header_wrapper flex_row w-full items-center">
+      <section class="header-logo h-full d-flex w-130px">
+        <img src="./public/images/logo-white.png" alt="" />
+      </section>
+
+      <section class="header_location w-100px d-flex items-center gap-1">
+        <div class="header-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="nav_item">
+          <p>Deliver to</p>
+          <span>Vietnam</span>
+        </div>
+      </section>
+
+      <section
+        class="header-search w-60 h-6 d-flex items-center bg-white br-2 gap-1 overflow-hidden"
+      >
+        <div class="categories_dropdown d-flex">
+          <p>All</p>
+          <div class="dropdown-arrow">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </div>
+        <form action="" class="d-flex w-full h-full">
+          <label for="search-key"></label>
+
+          <input
+            id="search-key"
+            type="text"
+            placeholder="Search Amazon"
+            class="w-full b-0"
+          />
+
+          <button type="submit" title="search" class="search_button pointer">
+            <div class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </button>
+        </form>
+      </section>
+
+      <section class="flex_row justify-between flex-grow-1 ml-5">
+        <div class="header-language header-nav-right-language">
+          <i class="fa-solid fa-globe"></i>
+          <p>EN</p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+
+        <div class="header-nav-right">
+          <p>Hello, Sign in</p>
+          <h4>Account & Lists</h4>
+        </div>
+
+        <div class="header-nav-right">
+          <p>Returns</p>
+          <h4>& Orders</h4>
+        </div>
+
+        <!-- cart -->
+        <div class="header-nav-right-cart">
+          <span>0</span>
+          <div class="header-cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <h4>Cart</h4>
+        </div>
+      </section>
+    </header>
+
+    <!-- Body -->
+    <section name="body"></section>
+
+    <!-- Footer -->
+    <footer></footer>
+  </body>
+</html>
