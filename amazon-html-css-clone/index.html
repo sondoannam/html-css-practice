@@ -13,10 +13,13 @@
   <body>
     <!-- Header -->
     <header class="header_wrapper flex_row w-full items-center">
-      <section class="header-logo h-full d-flex w-130px">
+      <!-- header logo -->
+      <section class="header-logo h-full d-flex items-center w-130px gap-1">
+        <i class="logo-bar fa-solid fa-bars"></i>
         <img src="./public/images/logo-white.png" alt="" />
       </section>
 
+      <!-- header location -->
       <section class="header_location w-100px d-flex items-center gap-1">
         <div class="header-icon">
           <i class="fa-solid fa-location-dot"></i>
@@ -27,20 +30,37 @@
         </div>
       </section>
 
+      <!-- header searchbar -->
       <section
-        class="header-search w-60 h-6 d-flex items-center bg-white br-2 gap-1 overflow-hidden"
+        class="header-search w-60 h-6 d-flex items-center bg-white br-2 gap-1"
       >
         <div class="categories_dropdown d-flex">
-          <p>All</p>
-          <div class="dropdown-arrow">
-            <i class="fa-solid fa-caret-down"></i>
+          <div class="header-categories-search-trigger w-full h-full dropdown">
+            <button
+              onclick="onClickSearchCategoryBtn()"
+              class="dropbtn d-flex gap-1 w-full h-full items-center justify-center"
+            >
+              All
+              <div class="dropdown-arrow">
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </button>
+
+            <div
+              id="myDropdown"
+              class="search-categories-dropdown-content absolute"
+            >
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </div>
           </div>
         </div>
         <form action="" class="d-flex w-full h-full">
-          <label for="search-key"></label>
+          <label for="search-key-2"></label>
 
           <input
-            id="search-key"
+            id="search-key-2"
             type="text"
             placeholder="Search Amazon"
             class="w-full b-0"
@@ -54,11 +74,22 @@
         </form>
       </section>
 
-      <section class="flex_row justify-between flex-grow-1 ml-5">
-        <div class="header-language header-nav-right-language">
-          <i class="fa-solid fa-globe"></i>
-          <p>EN</p>
-          <i class="fa-solid fa-caret-down"></i>
+      <!-- header nav right -->
+      <section
+        class="header-nav-right-wrapper flex_row justify-between flex-grow-1 ml-5"
+      >
+        <div class="header-language header-nav-right-language relative">
+          <div class="header-language-btn d-flex gap-1 h-full items-center">
+            <i class="fa-solid fa-globe"></i>
+            <p>EN</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+
+          <div id="myDropdown2" class="header-language-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
         </div>
 
         <div class="header-nav-right">
@@ -80,12 +111,64 @@
           <h4>Cart</h4>
         </div>
       </section>
+
+      <section class="mobile-nav-right">
+        <div class="d-flex gap-1">
+          <p>Sign in</p>
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="header-nav-right-cart">
+          <span>0</span>
+          <div class="header-cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <header class="header-search-mobile">
+      <form action="" class="d-flex w-full h-full">
+        <label for="search-key"></label>
+
+        <input
+          id="search-key"
+          type="text"
+          placeholder="Search Amazon"
+          class="w-full b-0"
+        />
+
+        <button type="submit" title="search" class="search_button pointer">
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </button>
+      </form>
+    </header>
+
+    <header name="header2">
+      <div class="header_2 d-flex items-center">
+        <div class="header-2-item d-flex items-center gap-1">
+          <i class="header-2-bar fa-solid fa-bars"></i>
+          <p>All</p>
+        </div>
+        <div class="header-2-item d-flex items-center gap-1">
+          <p>Today's deals</p>
+        </div>
+      </div>
     </header>
 
     <!-- Body -->
-    <section name="body"></section>
+    <section name="body" style="background-color: black; height: 100vh; display: flex;">
+      
+    </section>
 
     <!-- Footer -->
     <footer></footer>
+
+    <script>
+      function onClickSearchCategoryBtn() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
   </body>
 </html>
